@@ -15,7 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.cvt.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
-    TextView textView;
+
     private FragmentFirstBinding binding;
 
     @Override
