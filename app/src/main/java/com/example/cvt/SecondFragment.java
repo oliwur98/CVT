@@ -18,25 +18,26 @@ import com.example.cvt.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
 
-    EditText textInputEditTextFirstName, textInputEditTextLastName, textInputEditTextEmail, textInputEditTextPassword, textInputEditTextPasswordCheck;
+    private EditText textInputEditTextFirstName, textInputEditTextLastName, textInputEditTextEmail, textInputEditTextPassword, textInputEditTextPasswordCheck;
     private FragmentSecondBinding binding;
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
+            Bundle savedInstanceState)
+    {
+        View v = inflater.inflate(R.layout.fragment_second,container,false);
 
 
-    ) {
 
 
-        binding= FragmentSecondBinding.inflate(inflater, container, false);
-        textInputEditTextFirstName = findViewById(R.id.firstName);
-        textInputEditTextLastName = findViewById(R.id.lastName);
-        textInputEditTextEmail = findViewById(R.id.registerEmail);
-        textInputEditTextPassword = findViewById(R.id.password);
-        textInputEditTextPasswordCheck = findViewById(R.id.passwordConfirm);
-        return binding.getRoot();
+
+        textInputEditTextFirstName = (EditText) v.findViewById(R.id.firstName);
+        textInputEditTextLastName = (EditText) v.findViewById(R.id.lastName);
+        textInputEditTextEmail = (EditText) v.findViewById(R.id.registerEmail);
+        textInputEditTextPassword = (EditText) v.findViewById(R.id.password);
+        textInputEditTextPasswordCheck = (EditText) v.findViewById(R.id.passwordConfirm);
+        return v;
 
 
     }
